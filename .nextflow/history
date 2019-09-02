@@ -1,0 +1,2 @@
+2019-04-26 14:36:39	8.1s	dreamy-avogadro	ERR	a034d7d2ff8d3ecf6e1c80ef3fe2305a9de0af0b	5a38ecd8-5447-4606-b0f2-0d2aeb7b4b19	nextflow run ebenz99/MPCM-Nextflow -name dreamy-avogadro -latest true
+2019-09-02 13:21:00	2m 18s	cheeky-plateau	OK	e7d523f2eb0754f575f608e4e4ac37e78eb83148	9d7bc0f7-eaed-4a79-bcaa-3de820bbbef5	nextflow run ebenz99/Kube-Test -name cheeky-plateau -latest true

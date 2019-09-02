@@ -1,0 +1,60 @@
+Sep-02 13:20:54.792 [main] DEBUG nextflow.cli.Launcher - $> nextflow run ebenz99/Kube-Test -name cheeky-plateau -latest true
+Sep-02 13:20:55.837 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.01.0
+Sep-02 13:20:56.084 [main] INFO  nextflow.cli.CmdRun - Pulling ebenz99/Kube-Test ...
+Sep-02 13:20:56.085 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/ebenz99/Kube-Test/contents/nextflow.config
+Sep-02 13:20:57.703 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/ebenz99/Kube-Test/contents/main.nf
+Sep-02 13:20:57.856 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/ebenz99/Kube-Test
+Sep-02 13:20:58.006 [main] DEBUG nextflow.scm.AssetManager - Pulling ebenz99/Kube-Test -- Using remote clone url: https://github.com/ebenz99/Kube-Test.git
+Sep-02 13:21:00.418 [main] INFO  nextflow.cli.CmdRun -  downloaded from https://github.com/ebenz99/Kube-Test.git
+Sep-02 13:21:00.475 [main] DEBUG nextflow.scm.AssetManager - Git config: /workspace/projects/ebenz99/Kube-Test/.git/config; branch: master; remote: origin; url: https://github.com/ebenz99/Kube-Test.git
+Sep-02 13:21:00.475 [main] INFO  nextflow.cli.CmdRun - Launching `ebenz99/Kube-Test` [cheeky-plateau] - revision: e7d523f2eb [master]
+Sep-02 13:21:00.493 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /workspace/projects/ebenz99/Kube-Test/nextflow.config
+Sep-02 13:21:00.506 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /workspace/ebensman/nextflow.config
+Sep-02 13:21:00.507 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /workspace/projects/ebenz99/Kube-Test/nextflow.config
+Sep-02 13:21:00.508 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /workspace/ebensman/nextflow.config
+Sep-02 13:21:00.519 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-02 13:21:00.596 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-02 13:21:00.674 [main] DEBUG nextflow.Session - Session uuid: 9d7bc0f7-eaed-4a79-bcaa-3de820bbbef5
+Sep-02 13:21:00.674 [main] DEBUG nextflow.Session - Run name: cheeky-plateau
+Sep-02 13:21:00.674 [main] DEBUG nextflow.Session - Executor pool size: 2
+Sep-02 13:21:00.685 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.01.0 build 5050
+  Modified: 22-01-2019 11:19 UTC (11:19 GMT)
+  System: Linux 4.15.15-1.el7.x86_64
+  Runtime: Groovy 2.5.5 on OpenJDK 64-Bit Server VM 1.8.0_181-b13
+  Encoding: UTF-8 (UTF-8)
+  Process: 8@cheeky-plateau [10.244.52.45]
+  CPUs: 1 - Mem: 62.8 GB (23 GB) - Swap: 0 (0)
+Sep-02 13:21:00.901 [main] DEBUG nextflow.Session - Work-dir: /workspace/ebensman/work [ceph]
+Sep-02 13:21:00.902 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /workspace/projects/ebenz99/Kube-Test/bin
+Sep-02 13:21:01.942 [main] DEBUG nextflow.Session - Session start invoked
+Sep-02 13:21:01.947 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Sep-02 13:21:01.948 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Sep-02 13:21:02.141 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-02 13:21:02.363 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: k8s
+Sep-02 13:21:02.363 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'k8s'
+Sep-02 13:21:02.388 [main] DEBUG nextflow.executor.Executor - Initializing executor: k8s
+Sep-02 13:21:02.390 [main] INFO  nextflow.executor.Executor - [warm up] executor > k8s
+Sep-02 13:21:02.398 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'k8s' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Sep-02 13:21:02.402 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: TaskPollingMonitor
+Sep-02 13:21:02.403 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: k8s)
+Sep-02 13:21:02.405 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: k8s
+Sep-02 13:21:02.412 [main] DEBUG nextflow.k8s.client.ConfigDiscovery - K8s config file does not exist: /root/.kube/config
+Sep-02 13:21:02.424 [main] DEBUG nextflow.k8s.K8sExecutor - [K8s] API client config=ClientConfig[ server=10.96.0.1:443, namespace=deepgtex-prp, token=eyJhbGciOiJ.., sslCert=LS0tLS1CRUd.., clientCert=-, clientKey=-, verifySsl=false, fromFile=true ]
+Sep-02 13:21:02.482 [main] DEBUG nextflow.Session - >>> barrier register (process: test)
+Sep-02 13:21:02.487 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > test -- maxForks: 2
+Sep-02 13:21:02.528 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Sep-02 13:21:02.529 [main] DEBUG nextflow.Session - Session await
+Sep-02 13:21:02.975 [Task submitter] INFO  nextflow.Session - [93/06358b] Submitted process > test (2)
+Sep-02 13:21:03.102 [Task submitter] INFO  nextflow.Session - [ad/8f663e] Submitted process > test (1)
+Sep-02 13:21:03.220 [Task submitter] INFO  nextflow.Session - [2d/bad94c] Submitted process > test (3)
+Sep-02 13:23:17.581 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: test (2); status: COMPLETED; exit: 0; error: -; workDir: /workspace/ebensman/work/93/06358b038989d5619777a6b7c74491]
+Sep-02 13:23:17.740 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: test (1); status: COMPLETED; exit: 0; error: -; workDir: /workspace/ebensman/work/ad/8f663e226a901b6d61fa0ffc494cee]
+Sep-02 13:23:17.919 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: test (3); status: COMPLETED; exit: 0; error: -; workDir: /workspace/ebensman/work/2d/bad94c3a1f15ee8573b5f9d44d3150]
+Sep-02 13:23:17.921 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: test)
+Sep-02 13:23:17.922 [main] DEBUG nextflow.Session - Session await > all process finished
+Sep-02 13:23:17.935 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: k8s)
+Sep-02 13:23:17.935 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-02 13:23:17.941 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=3; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms]
+Sep-02 13:23:18.076 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Sep-02 13:23:18.188 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

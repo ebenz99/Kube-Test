@@ -5,6 +5,6 @@ process test {
   val x from num
 
   """
-  ls > a.txt
+  pwd > a.txt
   """
 }
