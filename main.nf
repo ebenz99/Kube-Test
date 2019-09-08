@@ -5,6 +5,6 @@ process test {
   val x from num
 
   """
-  pwd > a.txt
+  date > d.txt
   """
 }
