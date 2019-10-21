@@ -1,10 +1,10 @@
-num = Channel.from(3..5)
+num = Channel.from(4..5)
 
 process test {
   input:
   val x from num
 
   """
-  date > d.txt
+  python3 app/app.py
   """
 }
