@@ -7,4 +7,4 @@ ADD . /
 
 WORKDIR /app
 
-#CMD ["python", "app.py","1"]
+CMD ["python", "app.py","1"]
