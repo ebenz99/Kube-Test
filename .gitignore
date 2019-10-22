@@ -1,4 +1,5 @@
 work
 .nextfl*
 com.sh
+nextflow.config
 initialize.sh
