@@ -1,17 +1,18 @@
 import random
-import numpy as np
+#import numpy as np
 import os
 import sys
 import time
+import requests
 
 def main():
-	#cdir = os.getcwd()
-	#ext = str(sys.argv[1])		
-	#ndir = cdir + "/op/"+ext
-	#os.makedirs(ndir,exist_ok=True)
-	mylist = [random.randint(0,20) for i in range(0,100)]
-	np.save("nums.npy",np.asarray(mylist))
-	time.sleep(300)
+	# mylist = [random.randint(0,20) for i in range(0,100)]
+	# np.save("nums.npy",np.asarray(mylist))
+	# time.sleep(300)
+	mname = "THIS IS ETHAN WORKKINGc"
+	URL = "https://ptsv2.com/t/ethan-place/post"
+	PARAMS = {'name':mname}
+	r = requests.post(url = URL, params = PARAMS)
 
 
 if __name__ == "__main__":
